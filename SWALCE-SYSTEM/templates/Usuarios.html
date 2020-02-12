@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="../statics/css/index.css">
+    <link rel="stylesheet" href="../statics/css/Usuarios.css">
+    <meta charset="utf-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script lenguage="javascript" src="../dynamics/js/Ajax.js"></script>
+    <script lenguage="javascript" src="../dynamics/js/Usuarios.js"></script>
+    <script lenguage="javascript" src="../dynamics/js/pruebajs.js"></script>
+    <script lenguage="javascript" src="../dynamics/js/nav-menu.js"></script>
+    <title>Administrador</title>
+  </head>
+  <body>
+    <nav id="nav-menu">
+      <ul class="nav-list" id="list">
+        <li class="nav-element" id="logo">SWALCE</li>
+        <li class="nav-element"  id="nav-element-1">Altas</li>
+        <li class="nav-element" id="nav-element-2">Bajas</li>
+        <li class="nav-element" id="nav-element-3">Consultas</li>
+        <li class="nav-element" id="nav-element-4">Notificaciones</li>
+        <li class="nav-element" id="nav-element-5">Opciones</li>
+      </ul>
+    </nav>
+      <aside class="menu-aside" id="men-as">
+        <ul class="menu-aside-list" id="aside">
+          <li class="menu-element" id="menu-element-1">Usuarios</li>
+          <li class="menu-element" id="menu-element-2">Inventario</li>
+          <li class="menu-element" id="menu-element-3">Actividades</li>
+          <li class="menu-element" id="menu-element-4"></li>
+        </ul>
+      </aside>
+
+      <section class="content" id="content-alta-usuarios">
+        <div>
+          </br><label for="">Seleccione el tipo de usuario:</label></br></br>
+            <input type="radio" name="tipo_usuario" value="1" id="tipo-usuario-p"><label for="">Profesor</label></br>
+            <input type="radio" name="tipo_usuario" value="2" id="tipo-usuario-l"><label for="">Laboratorista</label></br>
+            <input type="radio" name="tipo_usuario" value="3" id="tipo-usuario-c"><label for="">Coordinador</label></br>
+            <input type="radio" name="tipo_usuario" value="4" id="tipo-usuario-a"><label for="">Administrador</label></br></br>
+        </div><br>
+        <div class="info" id="alta_profesor">
+          <form name="formulario" onSubmit="enviarRfcProf(); return false">
+          <label>Introduzca el RFC del profesor: </label><input type="text" name="rfcp" size="10" maxlength="10" required id="rfcp">
+          <input type="submit" name="search_prof" value="Buscar">
+        </form></br>
+          <div id="rs_consp" class="datos_info"></div>
+        </div>
+        <div class="info" id="alta_laboratorista">
+          <form class="" method="POST">
+            <label>No. de trabajador: </label><input type="text" name="no_trab" value=""></br></br>
+            <label>Nombre: </label><input type="text" name="nom" value=""></br></br>
+            <label>RFC: </label><input type="text" name="rfcl" value=""></br></br>
+            <label>Fecha de nacimiento: </label><input type="text" name="fecha_nac" value=""></br></br>
+            <label>Email: </label><input type="text" name="email" value=""></br></br>
+            <label>Contraseña: </label><input type="text" name="contr" value=""></br></br>
+            <label>Laboratorio: </label><input type="text" name="lab" value=""></br></br></br>
+            <input type="submit" name="" value="Dar de alta">
+          </form>
+        </div>
+        <div class="info" id="alta_coordinador">
+          <form name="formulario" onSubmit="enviarRfcCoord(); return false">
+          <label>Introduzca el RFC del Coordinador: </label><input type="text" name="rfcc" size="10" maxlength="10" required id="rfcc">
+          <input type="submit" name="search_coord" value="Buscar">
+        </form></br>
+          <div id="rs_consc" class="datos_info"></div>
+        </div>
+        <div class="info" id="alta_administrador">
+          <form class="" method="POST">
+            <label>RFC: </label><input type="text" name="rfcl" value=""></br></br>
+            <label>Contraseña: </label><input type="text" name="contr" value=""></br></br>
+            <input type="submit" name="" value="Dar de alta">
+          </form>
+        </div>
+      </section>
+
+      <div class="invisible"></div>
+    <footer>Esto es el footer</footer>
+  </body>
+
+</html>
