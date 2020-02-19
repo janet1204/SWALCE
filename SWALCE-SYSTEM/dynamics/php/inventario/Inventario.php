@@ -1,6 +1,5 @@
 <?php
 class Inventario{
-  private $lab;
   private $material;
   private $no_inv;
   private $marca;
@@ -11,9 +10,10 @@ class Inventario{
   private $cantidad;
   private $observaciones;
   private $clasificacion;
+  private $estado;
 
-public function __construct($lab,$material,$no_inv,$marca,$modelo,$no_serie,$cve_salon,$ubicacion,$cantidad,$observaciones,$clasificacion){
-    $this->lab=$lab;
+public function __construct($material,$no_inv,$marca,$modelo,$no_serie,$cve_salon,$ubicacion,$cantidad,$observaciones,$clasificacion,$estado){
+
     $this->material=$material;
     $this->no_inv=$no_inv;
     $this->marca=$marca;
@@ -24,10 +24,7 @@ public function __construct($lab,$material,$no_inv,$marca,$modelo,$no_serie,$cve
     $this->cantidad=$cantidad;
     $this->observaciones=$observaciones;
     $this->clasificacion=$clasificacion;
-  }
-
-  public function getLab(){
-    return $this->lab;
+    $this->estado=$estado;
   }
 
   public function getMaterial(){
@@ -68,6 +65,10 @@ public function __construct($lab,$material,$no_inv,$marca,$modelo,$no_serie,$cve
 
   public function getClasificacion(){
     return $this->clasificacion;
+  }
+
+  public function getEstado(){
+    return $this->estado;
   }
 
   public function setNombre(){

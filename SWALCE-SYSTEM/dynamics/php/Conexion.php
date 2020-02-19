@@ -44,6 +44,22 @@ class Conexion{
     }
   }
 
+  public function altaInventario($material,$no_inv,$marca,$modelo,$no_serie,$cve_salon,$ubicacion,
+  $cantidad,$observaciones,$clasificacion,$estado){
+    self::conectar();
+    if(self::$conexion){
+      $insertar="INSERT INTO inventario (nombre_mat, no_inventario, marca, modelo, no_serie,
+        cve_salon,ubi_inter, cantidad observaciones, clasificacion, estado)VALUES
+        ('$material','$no_inv','$marca','$modelo','$no_serie','$cve_salon','$ubicacion','$cantidad',
+        '$observaciones','$clasificacion', '$estado')";
+      $respuesta= mysqli_query(self::$conexion,$insertar);
+      if($respuesta==true)
+        echo "dado de alta";
+      else
+        echo "fallo";
+      self::desconectar();
+    }
+  }
   public function baja($tabla, $atributoW, $valorW){//condicionar (solo si no se ha llevado a cabo la practica)
     self::conectar();
     if(self::$conexion){
