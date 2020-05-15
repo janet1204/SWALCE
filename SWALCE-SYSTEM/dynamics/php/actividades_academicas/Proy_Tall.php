@@ -2,9 +2,8 @@
 include_once "ActividadesAcademicas.php";
 class Proy_Tall extends ActividadesAcademicas{
     private $miembros;
-    private $fecha_ini;//agregar a horario lab
-    private $fecha_fin;//Agregar a horario lab
-    //Agregar tipo a la base de datos
+    private $fecha_ini;
+    private $fecha_fin;
 
     public function __construct($nombre, $tipo, $descripcion, $asignatura, $titular,$miembros, $fecha_ini, $fecha_fin){
         parent::__construct($nombre, $tipo, $descripcion, $asignatura, $titular);
@@ -31,7 +30,7 @@ class Proy_Tall extends ActividadesAcademicas{
     public function setFecha_fin(){
         $this->fecha_fin= $fecha_fin;
     }
-    public function getTipoString(){
+    public function getTipo(){
       if($this->tipo== self::PROYECTO)
         return "proyecto";
       else {

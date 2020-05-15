@@ -1,13 +1,13 @@
 <?php
 class ActividadesAcademicas{
-    public const PRACTICA= 1;
-    public const PROYECTO= 2;
-    public const TALLER= 3;
-    protected $nombre;
+  public const PRACTICA= 1;
+  public const PROYECTO= 2;
+  public const TALLER= 3;
+    private $nombre;
     protected $tipo;
-    protected $descripcion;
-    protected $asignatura;
-    protected $titular;
+    private $descripcion;
+    private $asignatura;
+    private $titular;
 
     protected function __construct($nombre, $tipo, $descripcion, $asignatura, $titular){
         $this->nombre= $nombre;
@@ -21,9 +21,6 @@ class ActividadesAcademicas{
         return $this->nombre;
     }
     public function getTipo(){
-        return $this->tipo;
-    }
-    public function getTipoString(){
     }
     public function getDescripcion(){
         return $this->descripcion;
@@ -49,15 +46,8 @@ class ActividadesAcademicas{
     public function setTitular(){
         $this->titular= $titular;
     }
-    /*public function consulta(){
-    }
-    public function alta(){
-    }
-    public function baja(){
-    }
-    public function cambio(){
-    }
     public function getInforme(){
-    }*/
+
+    }
 }
 ?>

@@ -1,7 +1,7 @@
 <?php
 include_once "ActividadesAcademicas.php";
 class Practica extends ActividadesAcademicas{
-    private $material;//cantidad y guardar en la tabla mat_act, debe ser un areeglo de materiales
+    private $material;
     private $tipoPract;
 
     public function __construct(string $nombre, $descripcion, $asignatura, $titular, $material, $tipoPract){
@@ -22,7 +22,7 @@ class Practica extends ActividadesAcademicas{
     public function setTipoPract($tipoPract){
         $this->tipoPract= $tipoPract;
     }
-    public function getTipoString(){
+    public function getTipo(){
       return "practica";
     }
 }

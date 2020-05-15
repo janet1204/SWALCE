@@ -1,7 +1,6 @@
 <?php
 include "Proy_Tall.php";
 include "Practica.php";
-include "Conexion.php";
 
 $nombre= $_POST['nombre'];
 $descripcion= $_POST['descripcion'];
@@ -30,19 +29,15 @@ if(isset($_POST['material'])){
 }
 echo "Nombre: ".$act->getNombre()."<br/>";
 echo "Descripcion: ".$act->getDescripcion()."<br/>";
-echo "Actividad: ".$act->getTipoString()."<br/>";
+echo "Actividad: ".$act->getTipo()."<br/>";
 echo "Asignatura: ".$act->getAsignatura()."<br/>";
 echo "Titular: ".$act->getTitular()."<br/>";
 if($tipo==1){
 echo "Material: ".$act->getMaterial()."<br/>";
 echo "Tipo de practica: ".$act->getTipoPract()."<br/>";
-Conexion::altaPract($act->getNombre(), $act->getDescripcion(), $act->getTipoPract(), $act->getAsignatura(), $act->getTitular());
 }else{
 echo "Miembros: ".$act->getMiembros()."<br/>";
 echo "Fecha de inicio: ".$act->getFecha_ini()."<br/>";
 echo "Fecha de fin: ".$act->getFecha_fin()."<br/>";
-Conexion::altaProyTall($act->getNombre(), $act->getDescripcion(), $act->getAsignatura(), $act->getTitular(), $act->getMiembros());
 }
-
-
  ?>

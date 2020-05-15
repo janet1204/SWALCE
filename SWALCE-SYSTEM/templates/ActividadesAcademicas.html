@@ -1,39 +1,19 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" dir="ltr">
   <head>
-    <link rel="stylesheet" href="../statics/css/index.css">
     <meta charset="utf-8">
-    <title>Actividades académicas</title>
+    <title></title>
   </head>
   <body>
-    <nav>
-      <ul class="nav-list">
-        <li class="nav-element" id="logo">SWALCE</li>
-        <li class="nav-element">Actividades</li>
-        <li class="nav-element">Inventario</li>
-        <li class="nav-element">Material</li>
-        <li class="nav-element">Notificaciones</li>
-        <li class="nav-element">Opciones</li>
-      </ul>
-    </nav>
-      <aside class="menu-aside" id="pru">
-        <ul class="menu-aside-list">
-          <li class="menu-element">Elemento 1</li>
-          <li class="menu-element">Elemento 2</li>
-          <li class="menu-element">Elemento 3</li>
-          <li class="menu-element">Elemento 4</li>
-        </ul>
-      </aside>
-      <section class="content">
-        <div class="formulario">
-            <button type="button" class="practica">Practica</button>
-            <button type="button" class="proyecto">Proyecto</button>
-            <button type="button" class="taller">Taller</button>
-        </div>
-      </section>
-      <div class="invisible"></div>
-    <footer>Esto es el footer</footer>
-    <script src="../dynamics/js/jquery-3.4.1.min.js"></script>
-    <script src="../dynamics/js/actAca.js" charset="utf-8"></script>
+    <div class="pp">
+      <div class="tabla">
+        <form class="" action="../dynamics/php/actividades_academicas/ActAca.php" method="post">
+          <input type="radio" name="actividad" value="1">Practica<br>
+          <input type="radio" name="actividad" value="2">Proyecto<br>
+          <input type="radio" name="actividad" value="3">Taller<br>
+          <input type="submit" name="" value="Enviar">
+        </form>
+      </div>
+    </div>
   </body>
 </html>
