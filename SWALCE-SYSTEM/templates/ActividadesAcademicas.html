@@ -3,37 +3,67 @@
   <head>
     <link rel="stylesheet" href="../statics/css/index.css">
     <meta charset="utf-8">
+    <script src="../dynamics/js/jquery-3.4.1.min.js"></script>
+    <script lenguage="javascript" src="../dynamics/js/nav-menu.js"></script>
+    <script src="../dynamics/js/actAca.js" charset="utf-8"></script>
     <title>Actividades académicas</title>
   </head>
   <body>
-    <nav>
-      <ul class="nav-list">
+    <nav id="nav-menu">
+      <ul class="nav-list" id="list">
         <li class="nav-element" id="logo">SWALCE</li>
-        <li class="nav-element">Actividades</li>
-        <li class="nav-element">Inventario</li>
-        <li class="nav-element">Material</li>
-        <li class="nav-element">Notificaciones</li>
-        <li class="nav-element">Opciones</li>
+        <li class="nav-element" id="nav-element-1">Altas</li>
+        <li class="nav-element" id="nav-element-2">Bajas</li>
+        <li class="nav-element" id="nav-element-3">Consultas</li>
+        <li class="nav-element" id="nav-element-4">Notificaciones</li>
+        <li class="nav-element" id="nav-element-5">Opciones</li>
       </ul>
     </nav>
-      <aside class="menu-aside" id="pru">
-        <ul class="menu-aside-list">
-          <li class="menu-element">Elemento 1</li>
-          <li class="menu-element">Elemento 2</li>
-          <li class="menu-element">Elemento 3</li>
-          <li class="menu-element">Elemento 4</li>
+      <aside class="menu-aside" id="men-as">
+        <ul class="menu-aside-list" id="aside">
+          <li class="menu-element" id="menu-element-1">Usuarios</li>
+          <li class="menu-element" id="menu-element-2">Inventario</li>
+          <li class="menu-element" id="menu-element-3">Actividades</li>
+          <li class="menu-element" id="menu-element-4"></li>
         </ul>
       </aside>
-      <section class="content">
-        <div class="formulario">
-            <button type="button" class="practica">Practica</button>
-            <button type="button" class="proyecto">Proyecto</button>
-            <button type="button" class="taller">Taller</button>
+      <section class="content" id="content-alta-actividades">
+        <div>
+          </br><label for="">Seleccione el tipo de actividad:</label></br></br>
+            <input type="radio" name="tipo_actividad" value="1" id="tipo-practica"><label for="">Practica</label></br>
+            <input type="radio" name="tipo_actividad" value="2" id="tipo-proyecto"><label for="">Proyecto</label></br>
+            <input type="radio" name="tipo_actividad" value="3" id="tipo-taller"><label for="">Taller</label></br>
+        </div><br>
+        <div class="info" id="alta">
+
+          <form class="" action="../dynamics/php/actividades_academicas/Prueba.php" method="post">
+            <label for="">Nombre:</label> <input type="text" name="nombre" value=""><br><br>
+            <label for="">Descripcion:</label><input type="text" name="descripcion" value=""><br><br>
+            <label for="">Asignatura:</label><input type="text" name="asignatura" value=""><br><br>
+            <label for="">Titular:</label><input type="text" name="titular" value=""><br><br>
+
+            <div class="info" id="alta_practica">
+              <label for="">Material:</label><input type="text" name="material" value=""><br><br>
+              <label for="">Tipo de practica:</label><input type="text" name="tipoPract" value=""><br><br>
+            </div>
+
+            <div class="info" id="alta_proy_tall">
+              <div class="info" id="alta_proy">
+                <label for="">Miembros:</label><input type="text" name="miembrosp" value=""><br><br>
+              </div>
+              <div class="info" id="alta_tall">
+                <label for="">Miembros:</label><input type="text" name="miembrost" value=""><br><br>
+              </div>
+              <label for="">Fecha de inicio:</label><input type="text" name="fecha_ini" value=""><br><br>
+              <label for="">Fecha de fin:</label><input type="text" name="fecha_fin" value=""><br><br>
+            </div>
+
+            <input type="submit" value="Enviar">
+          </form>
+
         </div>
       </section>
       <div class="invisible"></div>
     <footer>Esto es el footer</footer>
-    <script src="../dynamics/js/jquery-3.4.1.min.js"></script>
-    <script src="../dynamics/js/actAca.js" charset="utf-8"></script>
   </body>
 </html>

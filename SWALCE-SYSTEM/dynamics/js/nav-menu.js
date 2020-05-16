@@ -1,7 +1,8 @@
 $(document).ready(function(){
 
   var aside = document.getElementById("men-as");
-  var content_alta_usu =document.getElementById("content-alta-usuarios");
+  var content_alta_usu = document.getElementById("content-alta-usuarios");
+  var content_alta_aca = document.getElementById("content-alta-actividades");
   var color_active_1 = "#FF6161";
 
   $(".nav-element").click(function(){
@@ -33,9 +34,11 @@ $(document).ready(function(){
               $("#menu-element-2").css('color', 'black')
             }
             if($(this).attr('id')=="menu-element-3"){
+              content_alta_aca.style.display = "block";
               $("#menu-element-3").css('color', 'red');
             }else{
               $("#menu-element-3").css('color', 'black')
+              content_alta_aca.style.display = "none";
             }
             if($(this).attr('id')=="menu-element-4"){
               $("#menu-element-4").css('color', 'red');
