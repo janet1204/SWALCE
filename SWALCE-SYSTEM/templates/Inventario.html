@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="../statics/css/index.css">
+    <meta charset="utf-8">
+    <title>Inventario</title>
+  </head>
+  <body>
+    <nav>
+      <ul class="nav-list">
+        <li class="nav-element" id="logo">SWALCE</li>
+        <li class="nav-element">Actividades</li>
+        <li class="nav-element">Inventario</li>
+        <li class="nav-element">Material</li>
+        <li class="nav-element">Notificaciones</li>
+        <li class="nav-element">Opciones</li>
+      </ul>
+    </nav>
+      <aside class="menu-aside" id="pru">
+        <ul class="menu-aside-list">
+          <li class="menu-element">Elemento 1</li>
+          <li class="menu-element">Elemento 2</li>
+          <li class="menu-element">Elemento 3</li>
+          <li class="menu-element">Elemento 4</li>
+        </ul>
+      </aside>
+      <section class="content">
+        <div class="formulario">
+          <form class="" action="../dynamics/php/inventario/inv.php" method="post">
+            <label for="">Nombre del material:</label><input type="text" name="material" value=""><br><br>
+            <label for="">No_Inventario:</label><input type="text" name="no_inv" value=""><br><br>
+            <label for="">Marca:</label><input type="text" name="marca" value=""><br><br>
+            <label for="">Modelo:</label><input type="text" name="modelo" value=""><br><br>
+            <label for="">No.Serie:</label><input type="text" name="no_serie" value=""><br><br>
+            <label for="">Clave del salon:</label><input type="text" name="cve_salon" value=""><br><br>
+            <label for="">Ubicacion:</label><input type="text" name="ubicacion" value=""><br><br>
+            <label for="">Cantidad:</label><input type="text" name="cantidad" value=""><br><br>
+            <label for="">Observaciones:</label><input type="text" name="observaciones" value=""><br><br>
+            <label for="">Clasificacion:</label><input type="text" name="clasificacion" value=""><br><br>
+            <input type="submit" value="Enviar">
+          </form>
+        </div>
+      </section>
+      <div class="invisible"></div>
+    <footer>Esto es el footer</footer>
+  </body>
+</html>
